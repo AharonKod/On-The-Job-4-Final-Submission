@@ -3,8 +3,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+}
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Typography */
+.header-title, h1, h2, p {
+    margin-bottom: 15px;
+}
+
+/* Moving Background Animation */
+@keyframes moveBackground {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Header Title */
+.header-title {
+    font-size: 2.8em;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #fff;
+    padding: 40px 20px;
+    background: url('https://wallpapercave.com/wp/wp6176143.jpg') center / cover no-repeat;
+    border-radius: 10px;
+    display: inline-block;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    background-size: 200% auto; /* Scales the background to create movement */
+    animation: moveBackground 20s linear infinite; /* 20s duration, smooth transition, repeat */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a1a1a;
+}
+.navbar-brand {
+    font-size: 1.5em;
+    color: #3e5c6d;
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif;
+    letter-spacing: 1px;
+}
+.nav-link {
+    color: #f0f0f0;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #e6e6e6;
+}
+
+/* Section Styles */
+#header {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: #86a0a5;
+    padding: 70px 20px;
+    text-align: center;
+}
+#about, #gallery, #contact {
+    padding: 60px 20px;
+}
+#about {
+    background-color: #627485;
+}
+#about h2, #gallery h2, #contact h2 {
+    color: #fdfdfd;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#gallery {
+    background-color: #718397;
+}
+#contact {
+    background-color: #3c6a70;
+    color: #fdfdfd;
+}
+
 /* Weather Widget Styles */
 .weather-widget {
     background-color: #495057;
@@ -18,166 +99,74 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
-
 .weather-widget:hover {
     background-color: #6c757d;
 }
-
 .weather-icon img {
     width: 60px;
     height: 60px;
     margin-right: 15px;
 }
-
 .weather-info {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-
 .weather-temp {
     font-size: 1.8em;
     font-weight: bold;
     margin: 0;
 }
-
 .weather-desc {
     font-size: 1em;
     margin: 5px 0;
     color: #ced4da;
 }
-
 .weather-location {
     font-size: 0.9em;
     color: #adb5bd;
 }
 
-
-  /* Base styles */
-  body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #6c757d;
-    line-height: 1.6;
-  }
-  
-  /* Typography */
-  .header-title, h1, h2, p {
-    margin-bottom: 15px;
-  }
-  /* Moving Background Animation */
-@keyframes moveBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  .header-title {
-    font-size: 2.8em;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    color: #fff;
-    padding: 40px 20px;
-    background: url('https://wallpapercave.com/wp/wp6176143.jpg') center / cover no-repeat;
-    border-radius: 10px;
-    display: inline-block;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    /* New animation styles */
-    background-size: 200% auto; /* Scales the background to create movement */
-    animation: moveBackground 20s linear infinite; /* 20s duration, smooth transition, repeat */
-  }
-  
-  
-  /* Navbar */
-  .navbar {
-    background-color: #1a1a1a;
-  }
-  .navbar-brand {
-    font-size: 1.5em;
-    color: #3e5c6d;
-    font-weight: bold;
-    font-family: 'Verdana', sans-serif;
-    letter-spacing: 1px;
-  }
-  .nav-link {
-    color: #f0f0f0;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  .nav-link:hover {
-    color: #e6e6e6;
-  }
-  
-  /* Section Styles */
-  #header {
-    background: linear-gradient(135deg, #6c757d, #495057);
-    color: #86a0a5;
-    padding: 70px 20px;
-    text-align: center;
-  }
-  #about, #gallery, #contact {
-    padding: 60px 20px;
-  }
-  #about {
-    background-color: #627485;
-  }
-  #about h2, #gallery h2, #contact h2 {
-    color: #fdfdfd;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  #gallery {
-    background-color: #718397;
-  }
-  #contact {
-    background-color: #3c6a70;
-    color: #fdfdfd;
-  }
-  
-  /* Gallery Items */
-  .gallery-item {
+/* Gallery Items */
+.gallery-item {
     background-color: #8f9ba0;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .gallery-item:hover {
+}
+.gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  .gallery-item img {
+}
+.gallery-item img {
     max-width: 100%;
     border-radius: 8px;
     transition: transform 0.3s;
-  }
-  .gallery-item img:hover {
+}
+.gallery-item img:hover {
     transform: scale(1.08);
-  }
-  .gallery-item p {
+}
+.gallery-item p {
     margin-top: 12px;
     font-weight: bold;
     color: #0be4bc;
-  }
-  
-  /* Contact Form */
-  .contact-form .form-control {
+}
+
+/* Contact Form */
+.contact-form .form-control {
     border: 1px solid #4f5eb4;
     border-radius: 5px;
     padding: 12px;
     font-size: 1em;
     color: #333;
-  }
-  .contact-form .form-control:focus {
+}
+.contact-form .form-control:focus {
     border-color: #3f5e77;
     outline: none;
-  }
-  .contact-form .btn-primary {
+}
+.contact-form .btn-primary {
     background-color: #ff5e00;
     border: none;
     padding: 12px 20px;
@@ -185,16 +174,22 @@
     font-size: 1em;
     color: #fff;
     transition: background-color 0.3s;
-  }
-  .contact-form .btn-primary:hover {
+}
+.contact-form .btn-primary:hover {
     background-color: #a1b300;
-  }
-  
-  /* Footer */
-  .footer {
+}
+
+/* Footer */
+.footer {
     background-color: #1c1c1c;
     color: #fdfdfd;
     padding: 15px;
     font-size: 0.9em;
     text-align: center;
-  }
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
